@@ -18,14 +18,13 @@ function searchCity(city) {
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector('#temperature');
-
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 
-  let humidity = document.querySeclector('#humidity');
-  humidity.innerHTML = response.data.temperature.humidity;
+  let humidityElement = document.querySelector('#humidity');
+  humidityElement.innerHTML = response.data.temperature.humidity;
 
-  let windSpeed = document.querySeclector('#wind-speed');
-  windSpeed.innerHTML = response.data.wind.speed;
+  let windSpeedElement = document.querySelector('#wind-speed');
+  windSpeedElement.innerHTML = response.data.wind.speed;
 }
 
 function formatDate(date) {
