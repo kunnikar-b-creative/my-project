@@ -20,6 +20,12 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector('#temperature');
 
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+
+  let humidity = document.querySeclector('#humidity');
+  humidity.innerHTML = response.data.temperature.humidity;
+
+  let windSpeed = document.querySeclector('#wind-speed');
+  windSpeed.innerHTML = response.data.wind.speed;
 }
 
 function formatDate(date) {
